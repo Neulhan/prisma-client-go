@@ -154,6 +154,10 @@ func DownloadCLI(toDir string) error {
 	return nil
 }
 
+func GetEnginePath(dir, engine, binaryName string) string {
+	return platform.CheckForExtension(path.Join(dir, fmt.Sprintf("prisma-%s-%s", engine, binaryName)))
+}
+
 func DownloadEngine(name string, toDir string) (file string, err error) {
 	binaryName := platform.BinaryPlatformName()
 
@@ -235,8 +239,7 @@ func copyFile(from string, to string) error {
 		return fmt.Errorf("readfile: %w", err)
 	}
 
-	err = ioutil.WriteFile(to, input, os.ModePerm)
-	if err != nil {
+	if err := ioutil.WriteFile(to, input, os.ModePerm); err != nil {
 		return fmt.Errorf("writefile: %w", err)
 	}
 

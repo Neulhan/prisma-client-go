@@ -4,6 +4,10 @@ github.com/iancoleman/strcase v0.0.0-20190422225806-e506e3ef7365 h1:ECW73yc9MY79
 github.com/iancoleman/strcase v0.0.0-20190422225806-e506e3ef7365/go.mod h1:SK73tn/9oHe+/Y0h39VT4UCxmurVJkR5NA7kMEAOgSE=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
+github.com/steebchen/go-binaries v0.0.0-20200710154508-bc135eaf3148 h1:sQ+UGc/8yak/k6zpWOAwE6zP/okftDt9uM+TzUHoh0k=
+github.com/steebchen/go-binaries v0.0.0-20200710154508-bc135eaf3148/go.mod h1:mvVP6o0hssCe4L6SmixHJS3fgCQblM50fB+BaNwUwfs=
+github.com/steebchen/go-binaries v0.0.0-20200710155936-d27fb399cc22 h1:8nLdZt699P9gtwrCjVVJ73GMc2M9pY3xFsj4ymQ0d8A=
+github.com/steebchen/go-binaries v0.0.0-20200710155936-d27fb399cc22/go.mod h1:mvVP6o0hssCe4L6SmixHJS3fgCQblM50fB+BaNwUwfs=
 github.com/stretchr/objx v0.1.0 h1:4G4v2dO3VZwixGIRoQ5Lfboy6nUhCyYzaqnIAPPhYs4=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/testify v1.4.0 h1:2E4SXV/wtOkTonXsotYi4li6zVWxYlZuYNCXe9XRJyk=

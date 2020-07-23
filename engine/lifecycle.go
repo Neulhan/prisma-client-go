@@ -65,7 +65,10 @@ func (e *Engine) ensure() (string, error) {
 	ensureEngine := time.Now()
 
 	binariesPath := binaries.GlobalTempDir()
-	binaryName := platform.CheckForExtension(platform.BinaryPlatformName())
+	// check for darwin/windows/linux first
+	binaryName := platform.CheckForExtension(platform.Name())
+
+	// exactBinaryName := platform.CheckForExtension(platform.BinaryPlatformName())
 
 	var file string
 	// forceVersion saves whether a version check should be done, which should be disabled
@@ -111,18 +114,8 @@ func (e *Engine) ensure() (string, error) {
 	}
 
 	if file == "" {
-		logger.Info.Printf("no query engine defined or found")
-		logger.Info.Printf("if you want to pre-fetch the query engine for better startup performance, specify `binaryTargets = [\"native\"]` in your Schema.prisma file under \"generator\" and upload the query engine with your application.")
-		logger.Info.Printf("fetching the query engine now...")
-
-		qe, err := binaries.DownloadEngine("query-engine", binariesPath)
-		if err != nil {
-			return "", fmt.Errorf("could not fetch query engine: %w", err)
-		}
-
-		logger.Info.Printf("done.")
-
-		file = qe
+		// TODO log instructions on how to fix this problem
+		return "", fmt.Errorf("no binary found ")
 	}
 
 	startVersion := time.Now()
